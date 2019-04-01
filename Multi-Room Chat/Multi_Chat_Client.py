@@ -89,10 +89,10 @@ class ChatWindow():
         
         def close():
             try:
+                self._serverSocket.close()
                 self._serverSocket = None
                 self._name = None
                 self._connected = False
-                self._serverSocket.close()
             except:
                 pass
         
